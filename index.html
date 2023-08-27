@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>FriendMyFriend</title>
+        <link rel="stylesheet" href="/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body dir="ltr">
+        <main>
+            <script defer>
+                function search() {
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById('inp');
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("ul");
+                    li = ul.getElementsByTagName('li');
+
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            <h1>FriendMyFriend</h1>
+            <div class="search">
+                <input id="inp" onkeyup="search()" placeholder="Search links..">
+            </div>
+            <div class="about">
+                <h3>About us</h3>
+                <p>We are a company that makes software, games and websites!<br/>
+                Check us out we have many services here on this very website.<br/>
+                We were founded 2022 by Ishi Shimamoto for his love of coding.</p>
+            </div>
+            <div class="links">
+                <h3>Links</h3>
+                <ul id="ul">
+                    <li><a href="/watch">FriendMyVideo</a></li>
+                    <li><a href="http://world-of-gaming.github.io">World of gaming</a></li>
+                    <li><a href="http://github.com/friendthefriend">FriendTheFriend</a></li>
+                    <li><a href="https://github.com/friendmyfriend">FriendMyFriend Github</a></li>
+                    <li><a href="/library">FriendMyBooks</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright FriendMyFriend &copy; 2022 - Present All Rights Reserved</p>
+            </div>
+        </main>
+    </body>
+</html>
