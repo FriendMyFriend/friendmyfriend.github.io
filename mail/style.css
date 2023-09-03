@@ -1,0 +1,14 @@
+body, html {
+    color:white;
+    font-family:sans-serif;
+    background:rgb(38, 38, 38);
+}
+
+a:link, a, a:visited {
+    color:red;
+    text-decoration:none;
+}
+
+a:hover, a:visited:hover {
+    text-decoration:dotted underline;
+}

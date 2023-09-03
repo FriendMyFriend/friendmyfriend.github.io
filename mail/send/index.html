@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app>
+    <head>
+        <title>FriendMyMail &dash; Send</title>
+        <link rel="stylesheet" href="/mail/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    </head>
+    <body dir="ltr">
+        <main>
+            <h1>FriendMyMail</h1>
+            <div class="email-text">
+                <input type="email" ng-model="email" placeholder="Enter email to send email to.."/>
+            </div>
+            <div class="subject-text">
+                <input type="text" ng-model="subject" placeholder="Enter subject"/>
+            </div>
+            <div class="email">
+                <textarea ng-model="body">
+                    Enter email contents
+                </textarea>
+            </div>
+            <a href="mailto:{{ email }}?subject={{ subject }}&body={{ body }}">Send Email</a>
+            &NonBreakingSpace;
+            <a href="/mail/check">Check Email</a>
+        </main>
+    </body>
+</html>
