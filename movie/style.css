@@ -1,0 +1,29 @@
+body, html {
+    color:white;
+    font-family:sans-serif;
+    background-color:black;
+}
+
+table {
+    width:100%;
+    border:1px solid white;
+}
+
+tr, th, td {
+    border:1px solid white;
+    text-align:center;
+}
+
+.header {
+    background-color:gray;
+}
+
+a, a:link, a:visited {
+    color:blue;
+    text-decoration:none;
+}
+
+a:hover, a:visited:hover {
+    color:red;
+    text-decoration:solid underline;
+}

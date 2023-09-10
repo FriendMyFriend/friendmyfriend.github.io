@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>FriendMyMovies - Search</title>
+        <link rel="stylesheet" href="/movie/style.css"/>
+    </head>
+    <body dir="ltr">
+        <main>
+            <h1>FriendMyMovies</h1>
+            <input type="text" id="sbar" onkeyup="search()" placeholder="Search for movies"/>
+            <br/><br/>
+            <table id="movies">
+                <tr class="header">
+                    <th>Movies</th>
+                    <th>Genre</th>
+                    <th>Authors</th>
+                    <th>Format</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table><br/><br/>
+            <a href="index.html">Homepage</a>
+            <script>
+                function search() {
+                    var input, filter, table, tr, td, i, txtvalue;
+
+                    input = document.getElementById("sbar");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("movies");
+                    tr = table.getElementsByTagName("tr");
+
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[0];
+
+                        if (td) {
+                            txtvalue = td.textContent || td.innerText;
+
+                            if (txtvalue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                }
+            </script>
+        </main>
+    </body>
+</html>
