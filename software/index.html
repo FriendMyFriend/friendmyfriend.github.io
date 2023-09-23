@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>FriendMyFriend</title>
+        <link rel="stylesheet" href="/software/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body dir="ltr">
+        <main>
+            <script defer>
+                function search() {
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById('inp');
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("ul");
+                    li = ul.getElementsByTagName('li');
+
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            <h1>FriendMyFriend &dash; Software</h1>
+            <div class="search">
+                <input id="inp" onkeyup="search()" placeholder="Search links..">
+            </div>
+            <div class="links">
+                <h3>Links</h3>
+                <ul id="ul">
+                    <li><a href="/software/strawberryscript/" title="StrawberryScript">StrawberryScript</a></li>
+                    <li><a href="/software/bb/" title="BB">BB</a></li>
+                    <li><a href="/software/builderscript/" title="BuilderScript">BuilderScript/a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright FriendMyFriend &copy; 2022 - Present All Rights Reserved</p>
+            </div>
+        </main>
+    </body>
+</html>
